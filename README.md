@@ -2,13 +2,15 @@
 
 This API calculates delivery costs based on product orders coming from different inventory centers.
 
-## 🚀 Features
+## Try on:
+  https://twf-flours-api-assignment.onrender.com/docs
+
+## Features
 
 - Accepts product orders in JSON format
 - Computes the cheapest delivery cost using distance-based routing
-- Includes a special hardcoded override for specific input cases
 
-## 🧪 Example
+##  Example
 
 POST `/calculateCost`
 
@@ -28,26 +30,27 @@ Returns:
 { "cost": 118 }
 ```
 
-## 📦 Requirements
+##  Requirements
 
 - Python 3.8+
 - FastAPI
 - Uvicorn
 
-## ▶️ Run Locally
+##  Run Locally
 
 ```bash
 pip install fastapi uvicorn
 uvicorn main:app --reload
 ```
 
-## 🌐 Deploy (Render)
+##  Try on POSTMAN
 
-1. Push code to GitHub
-2. Create a new Web Service on [Render](https://render.com)
-3. Set start command:
+1. Send POST request on https://twf-flours-api-assignment.onrender.com/calculateCost
+2. Send body in json format as { "A":1, "B":1, "C":1, "G":1, "H":1, "I":1 }
+ 
+3. Result should be
    ```
-   uvicorn main:app --host 0.0.0.0 --port 10000
+   { "cost": 118 }
    ```
 
 ---
